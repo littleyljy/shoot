@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <style></style>
+  <title>射击游戏</title>
+</head>
+<body>
+  <div id="game" data-status="start">  
+    <div class="game-panel">
+      <section class="game-intro game-ui">
+        <h1 class="section-title">射击游戏</h1>
+        <p class="game-desc">这是一个令人欲罢不能的射击游戏，使用 ← 和 → 操作你的飞机，使用空格（space）进行射击，使用回车（enter）暂停游戏。一起来消灭宇宙怪兽吧！</p>
+        <p class="game-level">当前Level: 1</p>
+        <button class="js-play button">开始游戏</button>
+      </section>
+      <section class="game-failed game-ui">
+        <h1 class="section-title">游戏结束</h1>
+        <p class="game-info-text">最终得分: <span class="score"></span></p>
+        <button class="js-replay button">重新开始</button>
+      </section>
+      <section class="game-success game-ui">
+        <h1 class="section-title">游戏成功</h1>
+        <p class="game-next-level game-info-text"></p>
+        <button class="js-next button">继续游戏</button>
+      </section>
+      <section class="game-all-success game-ui">
+        <h1 class="section-title">通关成功</h1>
+        <p class="game-next-level game-info-text">你已经成功地防御了怪兽的所有攻击。</p>
+        <button class="js-replay button">再玩一次</button>
+      </section>
+      <section class="game-stop game-ui">
+        <h1 class="section-title">游戏暂停</h1>
+        <button class="js-stop button">游戏继续</button>
+      </section>
+    </div>
+    <div class="game-info game-ui">
+      <span class="title">分数:</span>
+      <span class="score"></span>
+    </div>
+    <canvas id="canvas" width="700" height="600">
+        <!-- 动画画板 -->
+    </canvas>
+  </div>
+  <!-- 主逻辑函数 -->
+  <script src="./js/fpstool.js" ></script>
+  <script src="./js/config.js" ></script>
+  <script src="./js/element.js" ></script>
+  <script src="./js/bullet.js" ></script>
+  <script src="./js/plane.js" ></script>
+  <script src="./js/enemy.js" ></script>
+  <script src="./js/app.js" ></script>
+</body>
+</html>
+
